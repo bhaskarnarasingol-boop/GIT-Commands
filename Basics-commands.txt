@@ -1,0 +1,116 @@
+Basics
+
+23s1087@O-LT-006897 basic-copy % history
+ 1023  git remote add origin https://github.com/bhaskarnarasingol-boop/basic.git
+ 1024  git remote -v
+ 1025  git push origin main
+ 1026  cd ..
+ 1027  mkdir basic-copy
+ 1028  cd basic-copy
+ 1029  git init
+ 1030  git config user.name "bhaskar"
+ 1031  git config user.email "bhaskar@gmail.com"
+ 1032  git remote add origin https://github.com/bhaskarnarasingol-boop/basic.git
+ 1033  git remote -v
+ 1034  git full origin main
+ 1035  git pull origin main
+ 1036  ls
+ 1037  git log --oneline
+ 1038  git remote remove origin
+23s1087@O-LT-006897 basic-copy % 
+
+
+
+
+
+
+
+
+
+23s1087@O-LT-006897 ~ % cd ..
+23s1087@O-LT-006897 /Users % cd ..
+23s1087@O-LT-006897 / % cd Desktop
+cd: no such file or directory: Desktop
+23s1087@O-LT-006897 / % ls
+Applications	dev		Library		sbin		Users		Volumes
+bin		etc		opt		System		usr
+cores		home		private		tmp		var
+23s1087@O-LT-006897 / % cd ..
+23s1087@O-LT-006897 / % ls
+Applications	dev		Library		sbin		Users		Volumes
+bin		etc		opt		System		usr
+cores		home		private		tmp		var
+23s1087@O-LT-006897 / % cd ~
+23s1087@O-LT-006897 ~ % ls
+Applications					Movies
+Desktop						Music
+Documents					OneDrive - TOYOTA KIRLOSKAR MOTOR PVT LTD
+Downloads					Pictures
+Library						Public
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir basic
+23s1087@O-LT-006897 Desktop % cd basic
+23s1087@O-LT-006897 basic % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/basic/.git/
+23s1087@O-LT-006897 basic % git config user.name "bhaskar"
+23s1087@O-LT-006897 basic % git config user.email "bhaskar@gmail.com
+dquote> 
+23s1087@O-LT-006897 basic % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 basic % ls
+23s1087@O-LT-006897 basic % touch a1.txt
+23s1087@O-LT-006897 basic % ls
+a1.txt
+23s1087@O-LT-006897 basic % git add .
+23s1087@O-LT-006897 basic % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   a1.txt
+
+23s1087@O-LT-006897 basic % git commit -m "added a1.txt" a1.txt
+[main (root-commit) 637d241] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1087@O-LT-006897 basic % git remote add origin https://github.com/bhaskarnarasingol-boop/basic.git
+23s1087@O-LT-006897 basic % git remote -v
+origin	https://github.com/bhaskarnarasingol-boop/basic.git (fetch)
+origin	https://github.com/bhaskarnarasingol-boop/basic.git (push)
+23s1087@O-LT-006897 basic % git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 205 bytes | 205.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/bhaskarnarasingol-boop/basic.git
+ * [new branch]      main -> main
+23s1087@O-LT-006897 basic % cd ..
+23s1087@O-LT-006897 Desktop % mkdir basic-copy
+23s1087@O-LT-006897 Desktop % cd basic-copy
+23s1087@O-LT-006897 basic-copy % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/basic-copy/.git/
+23s1087@O-LT-006897 basic-copy % git config user.name "bhaskar"
+23s1087@O-LT-006897 basic-copy % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 basic-copy % git remote add origin https://github.com/bhaskarnarasingol-boop/basic.git
+23s1087@O-LT-006897 basic-copy % git remote -v
+origin	https://github.com/bhaskarnarasingol-boop/basic.git (fetch)
+origin	https://github.com/bhaskarnarasingol-boop/basic.git (push)
+23s1087@O-LT-006897 basic-copy % git full origin main
+git: 'full' is not a git command. See 'git --help'.
+
+The most similar command is
+	pull
+23s1087@O-LT-006897 basic-copy % git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 185 bytes | 61.00 KiB/s, done.
+From https://github.com/bhaskarnarasingol-boop/basic
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+23s1087@O-LT-006897 basic-copy % ls
+a1.txt
+23s1087@O-LT-006897 basic-copy % git log --oneline
+637d241 (HEAD -> main, origin/main) added a1.txt
+23s1087@O-LT-006897 basic-copy % git remote remove origin
