@@ -1,0 +1,126 @@
+Merge conflict
+
+
+23s1087@O-LT-006897 mergeconflict % history
+ 1023  git switch first
+ 1024  nano a1.txt
+ 1025  cat a1.txt
+ 1026  git switch main
+ 1027  git branch
+ 1028  git add .
+ 1029  git commit -m "added2 a1.txt" a1.txt
+ 1030  git log --oneline
+ 1031  git log
+ 1032  git switch main
+ 1033  git merge first
+ 1034  nano a1.txt
+ 1035  git status
+ 1036  git add .
+ 1037  git commit -m "added merge confict 3" a1.txt
+ 1038  cat a1.txt
+23s1087@O-LT-006897 mergeconflict % 
+
+
+
+
+
+
+23s1087@O-LT-006897 branching % cd ..
+23s1087@O-LT-006897 .Trash % cd ..
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir mergeconflict
+23s1087@O-LT-006897 Desktop % cd mergeconflict
+23s1087@O-LT-006897 mergeconflict % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/mergeconflict/.git/
+23s1087@O-LT-006897 mergeconflict % git config user.name "bhaskar"
+23s1087@O-LT-006897 mergeconflict % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 mergeconflict % touch a1.txt
+23s1087@O-LT-006897 mergeconflict % git add .
+23s1087@O-LT-006897 mergeconflict % git commit -m "added a1.txt" a1.txt
+[main (root-commit) dd39842] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1087@O-LT-006897 mergeconflict % git branch
+* main
+23s1087@O-LT-006897 mergeconflict % git checkout -b first
+Switched to a new branch 'first'
+23s1087@O-LT-006897 mergeconflict % ls
+a1.txt
+23s1087@O-LT-006897 mergeconflict % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 mergeconflict % nano a1.txt
+23s1087@O-LT-006897 mergeconflict % cat a1.txt
+hi bhaskar
+23s1087@O-LT-006897 mergeconflict % git add .
+23s1087@O-LT-006897 mergeconflict % git commit -m "added1 a1.txt" a1.txt
+[main 66a9c73] added1 a1.txt
+ 1 file changed, 1 insertion(+)
+23s1087@O-LT-006897 mergeconflict % git log --onelinr
+fatal: unrecognized argument: --onelinr
+23s1087@O-LT-006897 mergeconflict % git log --oneline
+66a9c73 (HEAD -> main) added1 a1.txt
+dd39842 (first) added a1.txt
+23s1087@O-LT-006897 mergeconflict % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 mergeconflict % nano a1.txt
+23s1087@O-LT-006897 mergeconflict % cat a1.txt
+hi chandan
+23s1087@O-LT-006897 mergeconflict % git switch main 
+error: Your local changes to the following files would be overwritten by checkout:
+	a1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+23s1087@O-LT-006897 mergeconflict % git branch
+* first
+  main
+23s1087@O-LT-006897 mergeconflict % git add .
+23s1087@O-LT-006897 mergeconflict % git commit -m "added2 a1.txt" a1.txt
+[first 6c45aea] added2 a1.txt
+ 1 file changed, 1 insertion(+)
+23s1087@O-LT-006897 mergeconflict % git log --oneline
+6c45aea (HEAD -> first) added2 a1.txt
+dd39842 added a1.txt
+23s1087@O-LT-006897 mergeconflict % git log
+commit 6c45aea7d4c87083b71bdc06cee192ead603328f (HEAD -> first)
+Author: bhaskar <bhaskar@gmail.com>
+Date:   Sat Jun 20 16:12:49 2026 +0530
+
+    added2 a1.txt
+
+commit dd398427e25aed9a47b8341647f8d8f707135afc
+Author: bhaskar <bhaskar@gmail.com>
+Date:   Sat Jun 20 16:08:42 2026 +0530
+
+    added a1.txt
+23s1087@O-LT-006897 mergeconflict % git switch main                     
+Switched to branch 'main'
+23s1087@O-LT-006897 mergeconflict % git merge first
+Auto-merging a1.txt
+CONFLICT (content): Merge conflict in a1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+23s1087@O-LT-006897 mergeconflict % nano a1.txt
+23s1087@O-LT-006897 mergeconflict % git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   a1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+23s1087@O-LT-006897 mergeconflict % git add .
+23s1087@O-LT-006897 mergeconflict % git commit -m "added merge confict 3" a1.txt
+fatal: cannot do a partial commit during a merge.
+23s1087@O-LT-006897 mergeconflict % cat a1.txt
+
+hi bhaskar
+
+
+
+hi chandan
+
+
+
+hi meghnath
