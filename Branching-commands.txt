@@ -1,0 +1,62 @@
+BRANCHING 
+
+
+23s1087@O-LT-006897 merging % cd ..
+23s1087@O-LT-006897 .Trash % cd ..
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir branching
+23s1087@O-LT-006897 Desktop % cd branching
+23s1087@O-LT-006897 branching % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/branching/.git/
+23s1087@O-LT-006897 branching % git config user.name "bhaskar"
+23s1087@O-LT-006897 branching % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 branching % touch a1.txt
+23s1087@O-LT-006897 branching % git add .
+23s1087@O-LT-006897 branching % git commit -m "added a1.txt" a1.txt
+[main (root-commit) f0f582c] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1087@O-LT-006897 branching % git branch
+* main
+23s1087@O-LT-006897 branching % git branch first
+23s1087@O-LT-006897 branching % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 branching % git switch main 
+Switched to branch 'main'
+23s1087@O-LT-006897 branching % git checkout -b seconds
+Switched to a new branch 'seconds'
+23s1087@O-LT-006897 branching % git branch -a
+  first
+  main
+* seconds
+23s1087@O-LT-006897 branching % 
+
+23s1087@O-LT-006897 branching % history
+  984  cd ..
+  985  cd Desktop
+  986  mkdir branching
+  987  cd branching
+  988  git init
+  989  git config user.name "bhaskar"
+  990  git config user.email "bhaskar@gmail.com"
+  991  touch a1.txt
+  992  git add .
+  993  git commit -m "added a1.txt" a1.txt
+  994  git branch
+  995  git branch first
+  996  git switch first
+  997  git switch main
+  998  git checkout -b seconds
+  999  git branch -a
+23s1087@O-LT-006897 branching % 
+
+
+
+
+Other commands
+
+To push git hub >>>>git push origin branch name
+To pull>>>>git pull origin branch name
+To list all branch present in remotely or git hub>>>>>git branch -r
+To list all branch present in remotely or git hub and locally >>>>>git branch -a
+To rename the branch >>>>>git branch -m old branch name  new branch name
