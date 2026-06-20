@@ -1,0 +1,238 @@
+2way Merging
+
+
+
+
+
+
+Merging
+
+
+  23s1087@O-LT-006897 Merging % history
+  911  git add .
+  912  git commit -m "added 3way.txt" 3way.txt
+  913  ls
+  914  git log --oneline
+  915  git switch main
+  916  git branch
+  917  ls
+  918  git log --oneline
+  919  git merge first
+  920  git log --oneline
+  921  git switch first
+  922  git log --oneline
+  923  git switch main
+  924  git remote add origin https://github.com/bhaskarnarasingol-boop/Merging-2way-3way.git
+  925  git remote -v
+  926  git push origin main
+
+
+
+
+Last login: Sat Jun 20 09:34:03 on ttys000
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir Merging
+23s1087@O-LT-006897 Desktop % cd Merging
+23s1087@O-LT-006897 Merging % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/Merging/.git/
+23s1087@O-LT-006897 Merging % git config user.name "Bhaskar"
+23s1087@O-LT-006897 Merging % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 Merging % touch 2way.txt
+23s1087@O-LT-006897 Merging % git add .
+23s1087@O-LT-006897 Merging % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   2way.txt
+
+23s1087@O-LT-006897 Merging % git commit -m "added 2way.txt" 2way.txt
+[main (root-commit) 3a6ac2f] added 2way.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2way.txt
+23s1087@O-LT-006897 Merging % git branch
+* main
+23s1087@O-LT-006897 Merging % git branch first
+23s1087@O-LT-006897 Merging % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 Merging % ls
+2way.txt
+23s1087@O-LT-006897 Merging % touch 3way.txt
+23s1087@O-LT-006897 Merging % git add .
+23s1087@O-LT-006897 Merging % git commit -m "added 3way.txt" 3way.txt
+[first d80fbc7] added 3way.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3way.txt
+23s1087@O-LT-006897 Merging % ls
+2way.txt	3way.txt
+23s1087@O-LT-006897 Merging % git log --oneline
+d80fbc7 (HEAD -> first) added 3way.txt
+3a6ac2f (main) added 2way.txt
+23s1087@O-LT-006897 Merging % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 Merging % git branch
+  first
+* main
+23s1087@O-LT-006897 Merging % ls
+2way.txt
+23s1087@O-LT-006897 Merging % git log --oneline
+3a6ac2f (HEAD -> main) added 2way.txt
+23s1087@O-LT-006897 Merging % git merge first
+Updating 3a6ac2f..d80fbc7
+Fast-forward
+ 3way.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3way.txt
+23s1087@O-LT-006897 Merging % git log --oneline
+d80fbc7 (HEAD -> main, first) added 3way.txt
+3a6ac2f added 2way.txt
+23s1087@O-LT-006897 Merging % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 Merging % git log --oneline
+d80fbc7 (HEAD -> first, main) added 3way.txt
+3a6ac2f added 2way.txt
+23s1087@O-LT-006897 Merging % git switch main  
+Switched to branch 'main'
+23s1087@O-LT-006897 Merging % git remote add origin https://github.com/bhaskarnarasingol-boop/Merging-2way-3way.git
+23s1087@O-LT-006897 Merging % git remote -v
+origin	https://github.com/bhaskarnarasingol-boop/Merging-2way-3way.git (fetch)
+origin	https://github.com/bhaskarnarasingol-boop/Merging-2way-3way.git (push)
+23s1087@O-LT-006897 Merging % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 413 bytes | 413.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/bhaskarnarasingol-boop/Merging-2way-3way.git
+ * [new branch]      main -> main
+
+
+
+
+
+
+
+
+3way merging
+
+
+history
+
+
+965  git switch main
+  966  git branch
+  967  touch a3.txt
+  968  ls
+  969  git add ..
+  970  git add .
+  971  git commit -m "added a3.txt" a3.txt
+  972  git switch first
+  973  ls
+  974  git log --oneline
+  975  git switch main
+  976  git merge first
+  977  git log --oneline
+  978  git switch first
+  979  git log --oneline
+  980  ls
+23s1087@O-LT-006897 merging % 
+
+
+
+
+
+
+
+23s1087@O-LT-006897 Merging % cd ..
+23s1087@O-LT-006897 .Trash % cd ..
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir merging
+23s1087@O-LT-006897 Desktop % cd merging
+23s1087@O-LT-006897 merging % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/merging/.git/
+23s1087@O-LT-006897 merging % git config user.name "bhaskar"
+23s1087@O-LT-006897 merging % gir config user.email "bhaskar@gmail.com"
+zsh: command not found: gir
+23s1087@O-LT-006897 merging % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 merging % touch 3way.txt
+23s1087@O-LT-006897 merging % ls
+3way.txt
+23s1087@O-LT-006897 merging % git add .
+23s1087@O-LT-006897 merging % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   3way.txt
+
+23s1087@O-LT-006897 merging % git commit -m "added 3way.txt" 3way.txt
+[main (root-commit) e8a0245] added 3way.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3way.txt
+23s1087@O-LT-006897 merging % git branch
+* main
+23s1087@O-LT-006897 merging % git checkout -b a1.txt
+Switched to a new branch 'a1.txt'
+23s1087@O-LT-006897 merging % git add .
+23s1087@O-LT-006897 merging % git commit -m "as" a1.txt
+error: pathspec 'a1.txt' did not match any file(s) known to git
+23s1087@O-LT-006897 merging % git branch first
+23s1087@O-LT-006897 merging % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 merging % touch a2.txt
+23s1087@O-LT-006897 merging % git add .
+23s1087@O-LT-006897 merging % git commit -m "added a2.txt" a2.txt
+[first b6a0068] added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+23s1087@O-LT-006897 merging % git log --oneline
+b6a0068 (HEAD -> first) added a2.txt
+e8a0245 (main, a1.txt) added 3way.txt
+23s1087@O-LT-006897 merging % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 merging % git branch
+  a1.txt
+  first
+* main
+23s1087@O-LT-006897 merging % touch a3.txt
+23s1087@O-LT-006897 merging % ls
+3way.txt	a3.txt
+23s1087@O-LT-006897 merging % git add ..
+fatal: ..: '..' is outside repository at '/Users/23s1087/Desktop/merging'
+23s1087@O-LT-006897 merging % git add .
+23s1087@O-LT-006897 merging % git commit -m "added a3.txt" a3.txt
+[main 92933e8] added a3.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a3.txt
+23s1087@O-LT-006897 merging % git switch first                   
+Switched to branch 'first'
+23s1087@O-LT-006897 merging % ls
+3way.txt	a2.txt
+23s1087@O-LT-006897 merging % git log --oneline
+b6a0068 (HEAD -> first) added a2.txt
+e8a0245 (a1.txt) added 3way.txt
+23s1087@O-LT-006897 merging % git switch main  
+Switched to branch 'main'
+23s1087@O-LT-006897 merging % git merge first
+Merge made by the 'ort' strategy.
+ a2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+23s1087@O-LT-006897 merging % git log --oneline
+3c667bd (HEAD -> main) Merge branch 'first' merging done extra file
+92933e8 added a3.txt
+b6a0068 (first) added a2.txt
+e8a0245 (a1.txt) added 3way.txt
+23s1087@O-LT-006897 merging % git switch first 
+Switched to branch 'first'
+23s1087@O-LT-006897 merging % git log --oneline
+b6a0068 (HEAD -> first) added a2.txt
+e8a0245 (a1.txt) added 3way.txt
+23s1087@O-LT-006897 merging % ls
+3way.txt	a2.txt
+23s1087@O-LT-006897 merging % 
