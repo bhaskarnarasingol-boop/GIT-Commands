@@ -1,0 +1,11 @@
+23s1087@O-LT-006897 stash % cd ..
+23s1087@O-LT-006897 .Trash % cd ..
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % git clone https://github.com/jashj4624-netizen/New.git
+Cloning into 'New'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 12 (delta 3), reused 12 (delta 3), pack-reused 0 (from 0)
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (3/3), done.
