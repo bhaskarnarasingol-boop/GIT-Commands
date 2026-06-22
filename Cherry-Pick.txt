@@ -1,0 +1,209 @@
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a3.txt
+23s1087@O-LT-006897 Cherry-Pick % git log --oneline
+bb2e30a (HEAD -> main) aadded a3.txt
+cac926e aadded a2.txt
+5c2c2a0 aadded a1.txt
+23s1087@O-LT-006897 Cherry-Pick % git branch
+* main
+23s1087@O-LT-006897 Cherry-Pick % git checkout -b first
+Switched to a new branch 'first'
+23s1087@O-LT-006897 Cherry-Pick % git branch           
+* first
+  main
+23s1087@O-LT-006897 Cherry-Pick % touch a4.txt
+23s1087@O-LT-006897 Cherry-Pick % git add .
+23s1087@O-LT-006897 Cherry-Pick % git commit -m "added a4.txt" a4.txt
+[first 6600847] added a4.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a4.txt
+23s1087@O-LT-006897 Cherry-Pick % git log --oneline
+6600847 (HEAD -> first) added a4.txt
+bb2e30a (main) aadded a3.txt
+cac926e aadded a2.txt
+5c2c2a0 aadded a1.txt
+23s1087@O-LT-006897 Cherry-Pick % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 Cherry-Pick % git brancch
+git: 'brancch' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+23s1087@O-LT-006897 Cherry-Pick % git brancch
+git: 'brancch' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+23s1087@O-LT-006897 Cherry-Pick % git branch 
+  first
+* main
+23s1087@O-LT-006897 Cherry-Pick % touch a4.txt
+23s1087@O-LT-006897 Cherry-Pick % git add .
+23s1087@O-LT-006897 Cherry-Pick % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   a4.txt
+
+23s1087@O-LT-006897 Cherry-Pick % git status           
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   a4.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    a4.txt
+
+23s1087@O-LT-006897 Cherry-Pick % touch a4.txt
+23s1087@O-LT-006897 Cherry-Pick % git add .
+23s1087@O-LT-006897 Cherry-Pick % git status  
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   a4.txt
+
+23s1087@O-LT-006897 Cherry-Pick % clear
+
+23s1087@O-LT-006897 Cherry-Pick % cd ..
+23s1087@O-LT-006897 .Trash % cd ..
+23s1087@O-LT-006897 ~ % cd Desktop
+23s1087@O-LT-006897 Desktop % mkdir cherry-pick
+23s1087@O-LT-006897 Desktop % cd cherry-pick
+23s1087@O-LT-006897 cherry-pick % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/cherry-pick/.git/
+23s1087@O-LT-006897 cherry-pick % git config user.name "bhaskar"
+23s1087@O-LT-006897 cherry-pick % git config user.email "bhaskar@gmail.com"
+23s1087@O-LT-006897 cherry-pick % touch a{1..3}.txt
+23s1087@O-LT-006897 cherry-pick % ls
+a1.txt	a2.txt	a3.txt
+23s1087@O-LT-006897 cherry-pick % git add .
+23s1087@O-LT-006897 cherry-pick % git commmit -m "added a1.txt" a1.txt
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a1.txt" a1.txt 
+[main (root-commit) 6bf9abb] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a2.txt" a2.txt
+[main 794e022] added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+23s1087@O-LT-006897 cherry-pick % git commmit -m "added a3.txt" a3.txt
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a3.txt" a3.txt
+[main abd6a52] added a3.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a3.txt
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+abd6a52 (HEAD -> main) added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % git branch
+* main
+23s1087@O-LT-006897 cherry-pick % git checkout -b first
+Switched to a new branch 'first'
+23s1087@O-LT-006897 cherry-pick % touch a4.txt
+23s1087@O-LT-006897 cherry-pick % git add .
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a4.txt" a4.txt
+[first 5e02995] added a4.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a4.txt
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+5e02995 (HEAD -> first) added a4.txt
+abd6a52 (main) added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 cherry-pick % touch a5.txt
+23s1087@O-LT-006897 cherry-pick % git add .
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a5.txt" a5.txt
+[main 31f7d28] added a5.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a5.txt
+23s1087@O-LT-006897 cherry-pick % ls
+a1.txt	a2.txt	a3.txt	a5.txt
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+31f7d28 (HEAD -> main) added a5.txt
+abd6a52 added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % git switch first
+Switched to branch 'first'
+23s1087@O-LT-006897 cherry-pick % touch c6.txt
+23s1087@O-LT-006897 cherry-pick % git add .
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a6.txt" a6.txt
+error: pathspec 'a6.txt' did not match any file(s) known to git
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+5e02995 (HEAD -> first) added a4.txt
+abd6a52 added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % ls
+a1.txt	a2.txt	a3.txt	a4.txt	c6.txt
+23s1087@O-LT-006897 cherry-pick % git commit -m "added c6.txt" c6.txt
+[first 1994f19] added c6.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c6.txt
+23s1087@O-LT-006897 cherry-pick % git log --oneline                  
+1994f19 (HEAD -> first) added c6.txt
+5e02995 added a4.txt
+abd6a52 added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 cherry-pick % touch a7.tct
+23s1087@O-LT-006897 cherry-pick % git add .
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a7.txt" a7.txt
+error: pathspec 'a7.txt' did not match any file(s) known to git
+23s1087@O-LT-006897 cherry-pick % git commit -m "added a7.tct" a7.tct
+[main 4ef56a6] added a7.tct
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a7.tct
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+4ef56a6 (HEAD -> main) added a7.tct
+31f7d28 added a5.txt
+abd6a52 added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % git branch
+  first
+* main
+23s1087@O-LT-006897 cherry-pick % git cherry-pick 5e02995
+[main b9ddeb9] added a4.txt
+ Date: Mon Jun 22 11:49:32 2026 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a4.txt
+23s1087@O-LT-006897 cherry-pick % git log --oneline
+b9ddeb9 (HEAD -> main) added a4.txt
+4ef56a6 added a7.tct
+31f7d28 added a5.txt
+abd6a52 added a3.txt
+794e022 added a2.txt
+6bf9abb added a1.txt
+23s1087@O-LT-006897 cherry-pick % history
+ 1144  touch c6.txt
+ 1145  git add .
+ 1146  git commit -m "added a6.txt" a6.txt
+ 1147  git log --oneline
+ 1148  ls
+ 1149  git commit -m "added c6.txt" c6.txt
+ 1150  git log --oneline
+ 1151  git switch main
+ 1152  touch a7.tct
+ 1153  git add .
+ 1154  git commit -m "added a7.txt" a7.txt
+ 1155  git commit -m "added a7.tct" a7.tct
+ 1156  git log --oneline
+ 1157  git branch
+ 1158  git cherry-pick 5e02995
+ 1159  git log --oneline
+23s1087@O-LT-006897 cherry-pick % 
