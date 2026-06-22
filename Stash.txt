@@ -1,0 +1,85 @@
+23s1087@O-LT-006897 1 % cd ..
+23s1087@O-LT-006897 Desktop % mkdir stash
+23s1087@O-LT-006897 Desktop % cd stash
+23s1087@O-LT-006897 stash % git init
+Initialized empty Git repository in /Users/23s1087/Desktop/stash/.git/
+23s1087@O-LT-006897 stash % git config user.name "bhaskar"
+23s1087@O-LT-006897 stash % git config user.email "bahskar@gmail.com"
+23s1087@O-LT-006897 stash % touch a{1..5}.txt
+23s1087@O-LT-006897 stash % ls  
+a1.txt	a2.txt	a3.txt	a4.txt	a5.txt
+23s1087@O-LT-006897 stash % git add a1.txt a2.txt
+23s1087@O-LT-006897 stash % git commit -m "added a1.txt" a1.txt
+[main (root-commit) 15ff541] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1087@O-LT-006897 stash % git commit -m "added a2.txt" a2.txt
+[main 22974a4] added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+23s1087@O-LT-006897 stash % git stash
+No local changes to save
+23s1087@O-LT-006897 stash % git add .
+23s1087@O-LT-006897 stash % git stash
+Saved working directory and index state WIP on main: 22974a4 added a2.txt
+23s1087@O-LT-006897 stash % ls
+a1.txt	a2.txt
+23s1087@O-LT-006897 stash % git log --oneline
+22974a4 (HEAD -> main) added a2.txt
+15ff541 added a1.txt
+23s1087@O-LT-006897 stash % git branch
+* main
+23s1087@O-LT-006897 stash % git checkout -b first
+Switched to a new branch 'first'
+23s1087@O-LT-006897 stash % ls
+a1.txt	a2.txt
+23s1087@O-LT-006897 stash % git log --oneline
+22974a4 (HEAD -> first, main) added a2.txt
+15ff541 added a1.txt
+23s1087@O-LT-006897 stash % git switch main
+Switched to branch 'main'
+23s1087@O-LT-006897 stash % ls
+a1.txt	a2.txt
+23s1087@O-LT-006897 stash % git stash show
+ a3.txt | 0
+ a4.txt | 0
+ a5.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+23s1087@O-LT-006897 stash % ls  
+a1.txt	a2.txt
+23s1087@O-LT-006897 stash % git stash pop
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   a3.txt
+	new file:   a4.txt
+	new file:   a5.txt
+
+Dropped refs/stash@{0} (7f6c545553f98fd9c4917b9d634717ed4eeb7eb1)
+23s1087@O-LT-006897 stash % ls
+a1.txt	a2.txt	a3.txt	a4.txt	a5.txt
+23s1087@O-LT-006897 stash % git switch first
+A	a3.txt
+A	a4.txt
+A	a5.txt
+Switched to branch 'first'
+23s1087@O-LT-006897 stash % ls
+a1.txt	a2.txt	a3.txt	a4.txt	a5.txt
+23s1087@O-LT-006897 stash % history
+ 1189  git add .
+ 1190  git stash
+ 1191  ls
+ 1192  git log --oneline
+ 1193  git branch
+ 1194  git checkout -b first
+ 1195  ls
+ 1196  git log --oneline
+ 1197  git switch main
+ 1198  ls
+ 1199  git stash show
+ 1200  ls
+ 1201  git stash pop
+ 1202  ls
+ 1203  git switch first
+ 1204  ls
+23s1087@O-LT-006897 stash % 
