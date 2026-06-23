@@ -56,7 +56,19 @@ Switched to a new branch 'seconds'
 Other commands
 
 To push git hub >>>>git push origin branch name
+
 To pull>>>>git pull origin branch name
+
 To list all branch present in remotely or git hub>>>>>git branch -r
+
 To list all branch present in remotely or git hub and locally >>>>>git branch -a
+
 To rename the branch >>>>>git branch -m old branch name  new branch name
+
+to delete the brenches localy>>>>>git branch -d branch name
+                               or>>git branch -D branch name
+
+
+to delete the branches remotly:->>>>git push origin -d branch name
+
+rename>>>>git branch -m old branch name newbranch name
